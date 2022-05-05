@@ -60,9 +60,9 @@ def update_app_ui(textarea_value):
     if(textarea_value != "" or textarea_value[-1]==" "):
         response = check_review(textarea_value)
         if (response[0]==1):
-            return "Looks Like You Loved the Movie"
+            return "Positive"
         elif(response[0]==0):
-            return "Movie wasn't Great..."
+            return "negative"
         else:
             return "Unknown or is it Blank"
 
@@ -73,7 +73,7 @@ def main():
     open_browser()
     global scrapped_reviews
     global project_name
-    project_name = "Sentiment Analysis"
+    project_name = "Comment Analysis"
     print(f"My Project Name is {project_name}")
     # print(f"My Scrapped Data: {scrapped_reviews.sample(5)}")
     app.title = project_name
